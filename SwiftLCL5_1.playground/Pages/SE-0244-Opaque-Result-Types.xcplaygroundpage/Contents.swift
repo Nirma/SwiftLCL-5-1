@@ -5,7 +5,7 @@
  
   describes the conecpt
  of using "Opaque" reuslt types.
- This in layman's terms means "returning a protocol" instead of returning a concrete type.
+ This in layman's terms means "returning a type confroming to a protocol" instead of returning a concrete type.
  As long as the object being returned by the function conforms to the `protocol` specified then everything
  checks out and the code should compile and run as expected.
  
@@ -33,5 +33,16 @@ func gimmeATalkingHead() -> some TalkingHead {
     return Bratty()
 }
 
+func gimmieAnotherOne() -> some TalkingHead {
+    return Catty()
+}
+
 gimmeATalkingHead().say()
 
+
+/*:
+ A good reason for why this would be useful would be abstracting away non critical details in API design.
+ If the author of a library wants to change a fundamental underlaying type or implementation detail of the underlaying type
+ They can do so without any negative side effects of breaking changes, as long as the protocol that the type conforms to does not change.
+ Thus the API designer can hide implementation details and reveal just enough detail necessary for the user to beable to leverage the library.
+ */
