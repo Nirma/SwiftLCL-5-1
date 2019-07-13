@@ -1,9 +1,9 @@
 
 /*:
  
- # Opaque Result Types
+ # [Opaque Result Types SE-0244](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md)
  
- ![SE-0244](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md) describes the conecpt
+  describes the conecpt
  of using "Opaque" reuslt types.
  This in layman's terms means "returning a protocol" instead of returning a concrete type.
  As long as the object being returned by the function conforms to the `protocol` specified then everything

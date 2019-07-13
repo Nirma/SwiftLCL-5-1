@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw'>
+<playground version='6.0' target-platform='macos' display-mode='rendered'>
     <pages>
-        <page name='SE-0244 Opaque Result Types'/>
-        <page name='SE-0244 Opague Result Types'/>
+        <page name='Intro'/>
+        <page name='SE-0244-Opaque-Result-Types'/>
+        <page name='SE-0254-Static-and-class-subscripts'/>
+        <page name='SE-0242-Struct-init-default-values'/>
+        <page name='SE-0068-expanding-self'/>
+        <page name='SR-7799-optional-enum-switch'/>
     </pages>
 </playground>
