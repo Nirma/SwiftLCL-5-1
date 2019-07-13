@@ -1,10 +1,8 @@
-
-![](misc/SLCL-logo.png)
-
 # Swift 5.1 Live Change Log
 ![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
+## About
 Swift 5.1 brings with it a few major changes that really changes
 the way we all will program with Swift going forward. 
 There are quite a few "Whats new in Swift X.Y" playgrounds out there and 
