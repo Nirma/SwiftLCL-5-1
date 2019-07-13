@@ -1,6 +1,7 @@
-# Swift Live Change Log 5.1
 
-## Whats the deal?
+![](misc/SLCL-logo.png)
+
+# Animating Swift Changelog 5.1
 
 Swift 5.1 brings with it a few major changes that really changes
 the way we all will program with Swift going forward. 
@@ -29,3 +30,6 @@ to the top of the playground page:
  Twitter: @l33tcod3r
  */
 ```
+## License
+
+SwiftLCL is released under the MIT license. [See LICENSE](https://github.com/Nirma/SwiftLCL-5-1/blob/master/LICENSE) for details.
