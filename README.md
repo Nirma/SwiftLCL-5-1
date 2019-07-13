@@ -1,7 +1,7 @@
 
 ![](misc/SLCL-logo.png)
 
-# Animating Swift Changelog 5.1
+# SwiftLCL does Swift 5.1
 
 Swift 5.1 brings with it a few major changes that really changes
 the way we all will program with Swift going forward. 
