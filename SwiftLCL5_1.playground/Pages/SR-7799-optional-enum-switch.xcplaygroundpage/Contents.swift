@@ -6,7 +6,6 @@
  
  */
 
-
 enum SentryMode {
     case armed
     case unarmed
@@ -47,5 +46,3 @@ case .shouldBeUnarmedButNotReallySure:
 case .none:
     print("no data")
 }
-
-//: [Next](@next)

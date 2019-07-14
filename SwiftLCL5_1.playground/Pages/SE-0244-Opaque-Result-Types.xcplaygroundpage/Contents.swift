@@ -1,7 +1,7 @@
 
 /*:
  
- # [Opaque Result Types SE-0244](https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md)
+ # Opaque Result Types SE-0244
  
   describes the conecpt
  of using "Opaque" reuslt types.

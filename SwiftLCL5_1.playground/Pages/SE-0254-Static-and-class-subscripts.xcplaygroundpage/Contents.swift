@@ -1,8 +1,6 @@
 //: [Previous](@previous)
 /*:
- ## Static and class subscripts SE-0254
- 
- ### [Click Here for Proposal](https://github.com/apple/swift-evolution/blob/master/proposals/0254-static-subscripts.md)
+ # Static and class subscripts SE-0254
  
  This proposal extends the usage of subscripts with subscripting into static or class types.
  The way you do it does not change from before, just as before you could define a type with subscripting capabilities like so:
@@ -53,7 +51,4 @@ struct EmployeeTable2 {
 }
 
 EmployeeTable2["bob lazar"]?.division
-
-
-
 //: [Next](@next)
