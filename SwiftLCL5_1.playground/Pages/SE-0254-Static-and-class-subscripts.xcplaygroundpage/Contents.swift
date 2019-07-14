@@ -1,4 +1,5 @@
 //: [Previous](@previous)
+
 /*:
  # Static and class subscripts SE-0254
  
