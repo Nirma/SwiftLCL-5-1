@@ -46,3 +46,5 @@ gimmeATalkingHead().say()
  They can do so without any negative side effects of breaking changes, as long as the protocol that the type conforms to does not change.
  Thus the API designer can hide implementation details and reveal just enough detail necessary for the user to beable to leverage the library.
  */
+
+//: [Next](@next)
