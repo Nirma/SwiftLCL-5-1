@@ -2,6 +2,8 @@
 ![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
+![](/misc/preview.png)
+
 ## About
 Swift 5.1 brings with it a few major changes that really changes
 the way we all will program with Swift going forward. 
