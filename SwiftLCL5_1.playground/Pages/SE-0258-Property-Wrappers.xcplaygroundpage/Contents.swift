@@ -1,8 +1,9 @@
 //: [Previous](@previous)
 /*:
  # Property Wrappers SE-0258
+
  Property wrappers are happy little side effects you can apply to anything that counts as a property.
- You can use property wrappers similar to decorators in languages like python.
+ If you have done any SwiftUI you have most likely already have seen propert wrappers in the form of `@State`, `@Bindable` and `@Environment`.
  The most obvious feature of property wrappers is that they reduce boilerplate.
  
  There are countless applications of this new language feature and quite a few examles just in the official Swift Evolition proposal.
@@ -24,6 +25,8 @@
  inside of `wrappedValue` is where the true work of the property wrapper happens.
  This is where you can execute code that performs side effects and or possibly modify the proerty upon calling `get` or `set`
  of the property.
+ 
+ There is one other thing but it is optional, we will talk about it last.
  */
 
 
@@ -101,12 +104,106 @@ var bar = Foo()
 
 /*:
  The log below should display:
+ ```shell
      Log: Value retrieved!
      Log: Value set!
+ ```
  */
 
 bar.name
 bar.name = "Steve"
+
+/*:
+ # Projected Values
+ Projected values are optional but they can come in handy when you want to expose more of the API to the user.
+ Projected values can be assessed by placing a `$` in front of the variable and it allows you to return something else other than what you return with `wrappedValue`
+ Take for example our `AbsoluteValue` example expanded out:
+ */
+
+@propertyWrapper
+struct AbsoluteValuePlus {
+    private var _value: Int
+    private(set) var didCorrectLastValue = false
+    
+    init(initialValue: Int) {
+        self._value = initialValue
+    }
+    
+    var wrappedValue: Int {
+        get { _value }
+        set {
+            if newValue < 0 {
+                didCorrectLastValue = true
+                _value = newValue * -1
+            } else {
+                didCorrectLastValue = false
+                _value = newValue
+            }
+        }
+    }
+    
+    var projectedValue: Self {
+        self
+    }
+}
+
+struct SomeOtherVector {
+    var angle: Double = 0.0
+    @AbsoluteValuePlus var magnitude: Int = 1
+    
+    func didCorrectLastValue() -> Bool {
+        $magnitude.didCorrectLastValue
+    }
+}
+
+var zap = SomeOtherVector(angle: 45.0)
+zap.magnitude = 5
+zap.didCorrectLastValue()
+zap.magnitude = -50
+zap.didCorrectLastValue()
+
+/*: You can see here that we are using the projectedValue to accessinternal stateof the property wrapper.
+ Pretty handy right?
+ */
+
+/*:
+ # One more trick
+ You can pass in values to property wrappers.
+ Here is an expanded example of how to specify the name of the log to write data to.
+ 
+ */
+
+@propertyWrapper
+class LoggerPlus<Value> {
+    private var value: Value
+    private let logName: String
+    
+    init(initialValue: Value, logName: String) {
+        self.logName = logName
+        self.value = initialValue
+    }
+    
+    var wrappedValue: Value {
+        get {
+            print("\(logName) Log: Value retrieved!")
+            return value
+        }
+        set {
+            value = newValue
+            print("\(logName) Log: Value set!")
+        }
+    }
+}
+
+struct FooPlus {
+    @LoggerPlus(logName: "NickLog")
+    var name: String = "Joe"
+}
+
+var foo2 = FooPlus()
+
+foo2.name = "Bob"
+
 
 
 

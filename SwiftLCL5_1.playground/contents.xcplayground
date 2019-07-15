@@ -2,7 +2,7 @@
 <playground version='6.0' target-platform='macos' display-mode='raw'>
     <pages>
         <page name='Intro'/>
-        <page name='SE-258-Property-Wrappers'/>
+        <page name='SE-0258-Property-Wrappers'/>
         <page name='SE-0244-Opaque-Result-Types'/>
         <page name='SE-0254-Static-and-class-subscripts'/>
         <page name='SE-0242-Struct-init-default-values'/>
