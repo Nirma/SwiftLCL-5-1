@@ -13,6 +13,7 @@
  This the simple idea behind Swift Live Changelog, its just that: a live version of [CHANGELOG.md](https://github.com/apple/swift/blob/master/CHANGELOG.md)
  
  # Table of Contents
+ * [Property Wrappers](SE-0258-Property-Wrappers)
  * [Opaque Result Types](SE-0244-Opaque-Result-Types)
  * [Static and class subscripts](SE-0254-Static-and-class-subscripts)
  * [Struct initializer default values](SE-0242-Struct-init-default-values)
